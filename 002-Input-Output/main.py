@@ -108,3 +108,24 @@ print(cstr.ljust(40, '-'))
 # Printing the right aligned string with "-" padding
 print("The right aligned string is : ")
 print(cstr.rjust(40, '-'))
+
+"""
+Genellikle, TODO belirteci ile işaretlenmiş alanlar, kodun geliştirilme sürecinde dikkat çekmek veya bir sonraki 
+adımın ne olması gerektiğini belirtmek amacıyla kullanılır. 
+Geliştiriciler, bu belirteçleri gördüklerinde, 
+o kısımda bir iş yapılması gerektiğini anlarlar.
+"""
+
+
+# TODO: bu fonksiyonu optimize et
+def my_function2():
+    # there some problem heree
+    # maybe added some parameters
+    pass
+
+
+# TODO: Kullanıcı girişi doğrulaması eklenmeli
+user_input = input("Lütfen bir değer girin: ")
+
+# TODO: Bu modülü daha sonra incele
+import random
