@@ -38,3 +38,16 @@ if a > 10:
         print("a, 20'den küçük veya eşit")
 else:
     print("a, 10'dan küçük veya eşit")
+
+"""
+Kısa yol if-else ifadesi, if ve else bloklarında yalnızca bir ifadeye ihtiyaç duyulduğu durumlarda, 
+if ve else ifadelerini tek bir satırda yazmak için kullanılabilir.
+"""
+my_number = 10
+if my_number > 9: print('your number bigger than 9')
+
+"""
+statement_when_True if condition else 
+"""
+my_number2 = 8
+print(True) if my_number2 < 8 else print(False)
