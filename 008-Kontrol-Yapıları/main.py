@@ -51,3 +51,4 @@ statement_when_True if condition else
 """
 my_number2 = 8
 print(True) if my_number2 < 8 else print(False)
+
