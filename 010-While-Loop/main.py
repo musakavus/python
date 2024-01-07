@@ -1,16 +1,45 @@
-# This is a sample Python script.
+"""
+while döngüsü, belirli bir koşul karşılanana kadar bir bloğu
+tekrar tekrar çalıştırmak için kullanılır.
+Koşul yanlış olduğunda (False), döngüden çıkılır ve döngünün hemen
+sonrasındaki satır çalıştırılır.
+"""
 
-# Press Ctrl+Shift+Enter to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+"""
+while expression:
+    statement(s)
+    
+expression: Döngünün devam etmesi veya sona ermesi için bir koşul ifadesidir.
+statement(s): Koşul doğru olduğu sürece tekrarlanacak olan ifadeler.
+"""
+number = 1
+while number < 5:
+    print(number)
+    number += 1
 
+s = 'geeksforgeeks'
+# Using for loop
+for letter in s:
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    print(letter)
+    # break the loop as soon it sees 'e'
+    # or 's'
+    if letter == 'e' or letter == 's':
+        break
 
+print("Out of for loop")
+print()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+i = 0
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# Using while loop
+while True:
+    print(s[i])
+
+    # break the loop as soon it sees 'e'
+    # or 's'
+    if s[i] == 'e' or s[i] == 's':
+        break
+    i += 1
+
+print("Out of while loop ")
