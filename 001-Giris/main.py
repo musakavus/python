@@ -121,3 +121,28 @@ print(type(1e6))  # e
 
 a_string = 'a'
 print(type(a_string))
+
+# statik diller type bakımından daha güvenilirdir
+# statik diller daha hızlıdır daha verimlidr
+# dynamic diller ekstra hafıza yüküne sahiptir
+
+# dynimic diller daha esnek yapılar
+# gelen verilerin tipini bilmediğimiz zamanlarda dinamik diller daha esnektir
+
+data: str = '5'
+print(data)
+
+# bu sadece bir çözüm önerisidir. Mesela aşağıdaki kod hata vermez
+data2: int = 'a string'
+print(data2)
+print(type(data2))
+a_string2 = 'Hi world'
+print(len(a_string))
+print(len('Hi world'))
+print()
+a_list = [1, 2, 3, 4, 'hellow', 'world']
+print(len(a_list))
+
+# len ve type fonskiyonlarına sadece 1 tane parametre verilebilir
+
+
