@@ -99,3 +99,25 @@ a = 1 if 20 > 10 else 0
 
 # Printing value of a
 print("The value of a is: ", str(a))
+
+# \n --> newline
+# \t --> tab kadar boşluk
+# \a --> alarm
+
+print('Merhaba \'python\'')
+print('Merhaba "Python"')
+
+print(1 + 2j)  # komplex türde sayı
+
+k = 5 + 2j
+print(type(k))  # output: <class 'complex'>
+# int 32bit yada 64 bit kadar yer kaplar
+# float 64 bit
+# python 3 ile birlikte integerlardaki karakter sınırlandırması kaldırılmıştır
+
+print(1_000_000)  # 1.000.000 şeklindeki yazım için
+
+print(type(1e6))  # e
+
+a_string = 'a'
+print(type(a_string))
