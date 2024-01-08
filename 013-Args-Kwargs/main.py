@@ -42,3 +42,13 @@ print(episodes_points)
 print(episodes_name)
 
 
+def my_func(sayi1, sayi2):
+    """
+    return fonksiyonlardan çıkmaya yarar. Fonksiyon returnü gördü mü  fonksiyondan çıkar
+    ve yanındaki değeri döndürür
+    """
+    return sayi1 + sayi2  #
+
+
+total = my_func(5, 7)
+print(total)
