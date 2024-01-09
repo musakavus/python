@@ -140,3 +140,21 @@ def factorial(num):
 
 
 print(factorial(5))
+
+
+def func(number1: int, mystring: str) -> str:  # --> amaç okunabilirliği ve esnekliği artırmak
+    return str(number1) + ' ' + mystring
+
+
+result = func(4, 'chain')
+print(result)
+
+
+def func2(param: str) -> list:
+    return [1, 2]
+
+
+result2 = func2('param')
+print(result2)
+
+
