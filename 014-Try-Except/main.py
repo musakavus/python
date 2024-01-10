@@ -128,9 +128,19 @@
 while True:
     try:
         point = int(input('Enter a number: '))
+        print(point * 5)
 
     finally:
         print('finally block always work')
         break
 
 print('block out')
+
+# raise deyimi bizim kendi hata durumumuzu yaratmamızı sağlar
+
+
+try:
+    raise NameError('Error... It is name error ')
+    
+except NameError as e:
+    print(e)
