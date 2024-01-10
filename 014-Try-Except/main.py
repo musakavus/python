@@ -195,6 +195,7 @@ def add_product2(product: list) -> list:
 
 add_product2(my_products)
 
+# -o  bayrağını kullanırsak programı yürüttüğün zaman assert'li blok görmezden gelinir ve işlem gerçekleşir
 # ve fakat bu işlemi else if ile yaparsak hata yönetimi yapamayız
 # burda programın çökmesini istemeyip sadece kullanıcıya hata mesajı vermek istiyorsak
 # else if  kullanabiliriz. (raiseiz ve assertsiz)
