@@ -125,22 +125,78 @@
 # finally hata olsa da olmasa da çalışır
 
 # try, finally olduğu sürece except olmadan da çalışır
-while True:
-    try:
-        point = int(input('Enter a number: '))
-        print(point * 5)
-
-    finally:
-        print('finally block always work')
-        break
-
-print('block out')
+# while True:
+#     try:
+#         point = int(input('Enter a number: '))
+#         print(point * 5)
+#
+#     finally:
+#         print('finally block always work')
+#         break
+#
+# print('block out')
 
 # raise deyimi bizim kendi hata durumumuzu yaratmamızı sağlar
 
 
-try:
-    raise NameError('Error... It is name error ')
-    
-except NameError as e:
-    print(e)
+# try:
+#     raise NameError('Error... It is name error ')
+#
+# except NameError as e:
+#     print(e)
+
+# Raise deyimi try olmadan da çalışır
+# my_number = 5
+# if my_number == 5:
+#     raise Exception('Number cannot be equal to 5')  # exception tüm hataların hiyerarşik atası,dır
+# else:
+#     print(my_number)
+
+# --> Olası bu hatayı gidermek için işte o zaman try except bloğu kullanır
+
+# my_number = 5
+# try:
+#     if my_number == 5:
+#         raise Exception('Number cannot be equal to 5')  # exception tüm hataların hiyerarşik atası,dır
+#     else:
+#         print(my_number)
+# except Exception as e:
+#     print('Hata', e)
+
+# assert deyimi --> iddia anlamına gelir
+
+
+my_products = []
+
+
+# def add_product(product: list):
+#     assert len(
+#         product) != 0, 'the list is not empty'  # burda hata olmaması grektiğini iddia ediyoruz.
+#     # Hata varsa output versin istiyoruz.
+#     # Assert ifadesi çalışırsa sonraki hiç bir kod çalışmayacaktır
+#     product.append('iphone')
+#     return product
+#
+#
+# try:
+#     add_product(my_products)
+# except AssertionError as e:
+#     print(e)
+
+
+# aynı şekilde assert kullanmak yerine raise ile de aynı işlemi else if kısmında yapabiliriz
+def add_product2(product: list) -> list:
+    if len(product) != 0:
+        product.append('LG')
+    else:
+        raise Exception('Liste uzunluğu 0 değil...')
+    return product
+
+
+add_product2(my_products)
+
+# ve fakat bu işlemi else if ile yaparsak hata yönetimi yapamayız
+# burda programın çökmesini istemeyip sadece kullanıcıya hata mesajı vermek istiyorsak
+# else if  kullanabiliriz. (raiseiz ve assertsiz)
+# eğer programın çökmesini ve kullanıcıya hata vermesini istiyorsak raise
+# eğer programın çökmesini isteyip geliştiriciye mesaj vermek istiyorsak assert kullanırız
