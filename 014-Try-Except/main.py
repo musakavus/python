@@ -168,7 +168,6 @@
 
 my_products = []
 
-
 # def add_product(product: list):
 #     assert len(
 #         product) != 0, 'the list is not empty'  # burda hata olmaması grektiğini iddia ediyoruz.
@@ -185,15 +184,15 @@ my_products = []
 
 
 # aynı şekilde assert kullanmak yerine raise ile de aynı işlemi else if kısmında yapabiliriz
-def add_product2(product: list) -> list:
-    if len(product) != 0:
-        product.append('LG')
-    else:
-        raise Exception('Liste uzunluğu 0 değil...')
-    return product
-
-
-add_product2(my_products)
+# def add_product2(product: list) -> list:
+#     if len(product) != 0:
+#         product.append('LG')
+#     else:
+#         raise Exception('Liste uzunluğu 0 değil...')
+#     return product
+#
+#
+# add_product2(my_products)
 
 # -o  bayrağını kullanırsak programı yürüttüğün zaman assert'li blok görmezden gelinir ve işlem gerçekleşir
 # ve fakat bu işlemi else if ile yaparsak hata yönetimi yapamayız
@@ -201,3 +200,7 @@ add_product2(my_products)
 # else if  kullanabiliriz. (raiseiz ve assertsiz)
 # eğer programın çökmesini ve kullanıcıya hata vermesini istiyorsak raise
 # eğer programın çökmesini isteyip geliştiriciye mesaj vermek istiyorsak assert kullanırız
+
+
+# raiseyi genellikle (her zaman değil) if else deyimi içerisinde kullanılır
+# raise özel bir hata fırlatmak için kullanılır
