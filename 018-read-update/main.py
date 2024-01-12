@@ -116,3 +116,4 @@ with open('document.txt', 'r+', encoding='utf-8') as f:
     all_data_list.insert(2, added_data)  # 2. indise eklenecek datayı yazaım
     f.seek(0)  # tekrardan başa dönelim
     f.writelines(all_data_list)  # dosyayı tekrar oluşturup satır şeklinde ekleyelim
+
