@@ -128,3 +128,45 @@ Ayrıca repr ve str metodları muhakkak bir return değeri almak zorunda
 # ismi üzerinde şablon sınıf. Ne gerek var başka sınıflardan da miras almaya. Miras versin yeter
 # yada abstract classdan miras alan bir child class, başka sınıfları da miras alabilir. Multi lvl ve multi inheritance
 # hatırla
+
+
+"""
+from abc import ABC, abstractmethod
+
+class Animal(ABC):
+    def __init__(self, name):
+        self.name = name
+
+    @abstractmethod
+    def sound(self):
+        pass
+
+class Dog(Animal):
+    def sound(self):
+        return "Woof!"
+
+class Cat(Animal):
+    def sound(self):
+        return "Meow!"
+
+# Burada Animal sınıfından türetilmiş ama soyut yöntem olan sound() uygulanmamış 
+bir alt sınıf tanımlamaya çalışırsak hata alırız.
+# class Fish(Animal):
+#     pass
+
+dog = Dog("Buddy")
+cat = Cat("Whiskers")
+# fish = Fish("Nemo")
+
+print(dog.name + " says " + dog.sound())
+print(cat.name + " says " + cat.sound())
+
+
+Soyut sınıflar genellikle doğrudan örneklenmezler, bu nedenle __init__ yöntemi bazen gereksiz olabilir. 
+Ancak, bazı durumlarda soyut sınıflar, alt sınıfların paylaşabileceği ortak özelliklerin bir 
+kısmını tanımlamak için bir __init__ yöntemine sahip olabilir.
+
+Örneğin, Animal sınıfındaki __init__ yöntemi, alt sınıfların name özelliğini ayarlamak için kullanılabilir. 
+Böylece alt sınıfların hepsi bir name özelliğine sahip olur ve __init__ yöntemini 
+tekrar tekrar tanımlamak zorunda kalmazlar.
+"""
