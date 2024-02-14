@@ -38,4 +38,40 @@ Eğer base classda oluşturulan herhangi bir özelliği child class kullanmayaca
 (elbette bunu bazı yolları vardır ama oop mantığına terstir
 """
 
+"""
+Super() fonksiyonu
+"""
 
+
+class Animal:
+    def __init__(self, _name, _type, _action):
+        self.name = _name
+        self.type = _type
+        self.action = _action
+
+    def register(self):
+        print(self.name + ' added')
+
+    def __repr__(self):
+        return f'Name: {self.name}, Type: {self.type}, Action: {self.action}'
+
+
+class Cats(Animal):
+    def __init__(self, _name, _type, _action, _jumping):
+        super().__init__(_name, _type, _action)  # super metodu miras alınan sınıfın özelliklerine erişmemizi sağlıyor
+        self.jumping = _jumping
+
+    def __str__(self):
+        return f'Jumping: {self.jumping}'
+
+
+a1 = Animal('Tiger', 'Cat', True)
+a1.register()
+print(a1)
+print('*' * 45)
+c1 = Cats('Tiger', 'Cat', True, True)
+print(c1.__repr__())
+c1.register()
+print(c1)
+
+# unutma base classta olulturulan her değişkeni her metodu child classta kullnabilirsin
